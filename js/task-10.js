@@ -12,7 +12,9 @@ destroyBtn.addEventListener('click', destroyBoxes);
 
 // Створюємо функцію яка додає елементи
 
-function createBoxes(amount) {
+function createBoxes() {
+    const amount = inputNumber.value;
+
     const elAddToDiv = [];
     for (let i = 0; i < amount; i += 1) {
         const div = document.createElement('div');
@@ -22,7 +24,7 @@ function createBoxes(amount) {
         elAddToDiv.push(div);
     }
     console.log('🚀 ~ createBoxes ~ elAddToDiv', elAddToDiv);
-    return elAddToDiv;
+    divCreatEl.append(...elAddToDiv);
 }
 
 // Створюємо функцію яка очіщає вміст елементів

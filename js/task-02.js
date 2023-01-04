@@ -8,6 +8,7 @@ const ingredients = [
 ];
 
 const ulEl = document.getElementById('ingredients');
+const list = [];
 
 // Цикл для перебору масиву
 ingredients.forEach(el => {
@@ -20,5 +21,9 @@ ingredients.forEach(el => {
     //Записуємо текст в li з масиву
     itemEl.textContent = el;
 
-    ulEl.append(itemEl);
+    // ulEl.append(itemEl);
+
+    list.push(itemEl);
 });
+
+ulEl.append(...list);
